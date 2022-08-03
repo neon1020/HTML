@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0803/test2.html</title>
+<style type="text/css">
+	/* 
+	< CSS 적용 우선 순위 (위 -> 아래 (아래가 우선), 계단식) >
+	1. !important : 가장 우선
+	2. 태그에 바로 적용 (= 인라인 스타일)
+	3. id
+	4. class
+	
+	< 스타일 상속 >
+	ex) body 태그 전체에 적용
+	 */
+	 
+	 p {
+	 	color: black;
+	 }
+	 
+	 h1 {
+	 	color:brown !important; /* h1태그에는 얘가 적용된다! (이게 우선) */
+	 }
+	 
+	 p {
+	 	color: blue; /* p태그에는 최종적으로 얘가 적용된다! */ 
+	 }
+</style>
+</head>
+<body>
+<div id="container">
+	<h1 style="color: green">레드향</h1>
+	<p style="color: red">껍질에 붉은 빛이 돌아 <span class="s1">레드향</span>이라 불린다.</p>
+	<p id="p1">레드향은 한라봉과 귤을 교배한 것으로</p>
+	<p class="p2">비타민C와 비타민B가 풍부하다.</p>
+</div>
+</body>
+</html>

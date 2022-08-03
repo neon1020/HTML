@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0803/test4.html</title>
+<style type="text/css">
+	/* text */
+	/* 글자 색상 지정 : 영문, RGB값(16진수 or 10진수)
+	 	color: red; => 영문
+	 	color: #ff0000; => 16진수 (0~F)
+	 	color: rgb(255,0,0); => 10진수 (0~255)
+	
+	   투명도 : rgba(=alpha)
+	   color: rgba(255, 0, 0, 0.5); */
+	
+	
+	/* 글자 정렬 : text-align: xxx;
+		=> left, right, center 등 
+		
+		위아래 가운데 정렬
+		=> 안쪽 여백, 줄 간격(영역 높이, 줄 간격 크기 동일하게 주면 가운데 정렬됨)
+		height: 50px;
+		line-height: 50px; */
+		
+	/* 글자 꾸미기(텍스트 줄표시) : text-decoration: xxx;
+		=> none(아무것도x ex 하이퍼링크 밑줄 없애고 싶을 때 - 많이 쓰임!),
+		   underline(밑줄), overline(윗줄), line-through(취소선) 등 */
+		
+	/* 글자 or 영역 그림자 : text-shadow: xxx;
+		=> 가로그림자(왼(-) 오(+)) 세로그림자(위(-) 아래(+)) 번짐정도 색
+		text-shadow: 1px(오) 1px(아래) 3px(번짐정도) black(색);
+	 */	
+	 
+	 /* 영문 대소문자 변환 : text-transform: xxx
+	 	=> capitalize(첫글자만 대문자로), uppercase(전체 대문자로 변경), lowercase(전체 소문자로 변경)
+	  */
+	
+	 /* 글자 간격 : letter-spacing: xxx; */
+	 
+	 /* 단어 간격 : word-spacing: xxx; */
+	 
+	h1 {
+		color: #0000FF;
+		text-align: center;
+		text-shadow: 1px 1px 3px black;
+	}
+	
+	p {
+		color: #00FF00;
+	}
+	
+	.s1 {
+		color: rgb(255, 0, 0);
+	}
+	
+	#p1 {
+		background-color: blue;
+		color: white;
+		text-align: center;
+		height: 50px;
+		line-height: 50px;
+		letter-spacing: 0.5em;
+		word-spacing: 1em;
+	}
+	
+	.p2 {
+		background-color: rgb(255, 0, 0);
+		color : rgba(255, 255, 255, 0.5);
+	}
+	
+	/* h1태그로 써도 됨 */
+	a {
+		/* 하이퍼링크에 기본으로 적용되는 밑줄과 글자색상(purple)을 변경 */
+		text-decoration: none;
+		color: silver;
+	}
+	
+	.t1 {
+		text-transform: capitalize;
+	}
+	
+	.t2 {
+		text-transform: uppercase;
+	}
+	
+	.t3 {
+		text-transform: lowercase;
+	}
+	
+</style>
+</head>
+<body>
+<div id="container">
+	<h1><a href="ex5.html">레드향</a></h1>
+	<p>껍질에 붉은 빛이 돌아 <span class="s1">레드향</span>이라 불린다.</p>
+	<p id="p1">레드향은 한라봉과 귤을 교배한 것으로</p>
+	<p class="p2">비타민C와 비타민B가 풍부하다.</p>
+	
+	<p class="t1">html</p>
+	<p class="t2">css</p>
+	<p class="t3">JAVASCRIPT</p>
+</div>
+</body>
+</html>

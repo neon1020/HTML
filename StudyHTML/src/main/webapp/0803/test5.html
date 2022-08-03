@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0803/test5.html</title>
+<style type="text/css">
+	/* list : 목록 스타일 */
+	
+	/* 목록 스타일 블릿 모양 지정 : list-style-type: xxx
+		=> disc(순서 없는 목록으로 변경), lower(또는 upper)-roman(또는 latin)(로마(또는 라틴)숫자),
+			decimal-leading-zero(01 형식으로 표현), none(모양 표시 x - 정렬용으로 많이 사용) */
+	 
+	 /* 목록 스타일 이미지 지정 : list-style-image: url("iamge 이름"); */
+	 
+	 /* 목록 들여쓰기 : list-style-position: xxx
+	 	=> inside(들여쓰기), outside(내어쓰기) */
+	
+	.book1 {
+		list-style-image: url("dot.png");
+		list-style-position: inside;
+	}
+	
+</style>
+</head>
+<body>
+<!-- 순서 o -->
+<ol class="book1">
+	<li>html</li>
+	<li>css</li>
+	<li>java</li>
+</ol>
+
+<!-- 순서 x -->
+<ul class="book2">
+	<li>html</li>
+	<li>css</li>
+	<li>java</li>
+</ul>
+
+</body>
+</html>
