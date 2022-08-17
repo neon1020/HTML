@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0817/test2.html</title>
+<style type="text/css">
+/* 어울리게 배치하기 : float */
+
+	* {
+		border: 1px solid black;
+	}
+	
+	img {
+		margin: 40px;
+		/* float의 기준 : 이미지 */
+		float: left;
+	}
+	
+	#pp {
+		/* 어울림 해제(float 적용돼있는 방향 기준으로) : left, right, both */
+		clear: left;
+	}
+</style>
+</head>
+<body>
+<img src="../0810/images/top.jpg">
+<p>가정용 꿀사과</p>
+<p>가정용 꿀사과</p>
+<p id="pp">가정용 꿀사과</p>
+</body>
+</html>

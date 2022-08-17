@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0817/test4.html</title>
+<style type="text/css">
+	/* 웹요소 위치 : left, right, top, bottom (기준위치에서 얼마나 떨어져있는지 지정) */
+	
+	/* 전체 여백 제거 */
+	* {
+		margin: 0px; padding: 0px;
+	}
+	
+	p {
+		width: 300px; border: 1px solid black;
+		padding: 10px;
+	}
+	
+	#pos1 {
+		left: 50px; top: 50px;
+		/* 배치 방법 지정 position : static(기본), relative(다른요소 기준), absolute(상위요소 기준), fixed(브라우저 기준) */
+		position: absolute;
+	}
+	
+	#pos2 {
+		right: 100px; top: 100px;
+		position: absolute;
+	}
+	
+	#pos3 {
+		left: 100px; bottom: 100px;
+		position: absolute;
+	}
+	
+</style>
+</head>
+<body>
+<p id="pos1">1. 가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하</p>
+<p id="pos2">2. 가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하</p>
+<p id="pos3">3. 가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하</p>
+</body>
+</html>
