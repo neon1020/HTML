@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0810/test1.html</title>
+<style type="text/css">
+	/* 테이블 스타일 */
+
+	table {
+		/* 테이블 제목 위치 지정 */
+		caption-side: bottom;
+		
+		/* 테이블 선 합치기 (기본값 : separate) */
+		border-collapse: collapse;
+		
+		/* 선 넣기(테이블 말고 다른 태그에도 사용 가능) */
+		border: 1px solid black;
+		
+		/* 너비 */
+		width: 200px;
+	}
+	
+	/* 선택자에 ,로 구분하여 여러개 적용 가능 */
+	td, th {
+		border: 1px solid black;
+		
+		/* 안 여백 */
+		padding: 10px;
+		
+		/* 글자 정렬 */
+		text-align: center;
+	}
+	
+	thead {
+		background-color: green;
+	}
+	
+	tbody {
+		background-color: yellow;
+	}
+	
+	tfoot {
+		background-color: pink;
+	}
+	
+	th {
+		color:blue;
+	}
+</style>
+</head>
+<body>
+<h1>회원목록</h1>
+	<table>
+	<caption>테이블 제목</caption>
+		<thead> <!-- 테이블 헤드 -->
+		<tr>
+			<th>번호</th>
+			<th>이름</th>
+		</tr>
+		</thead>
+		
+		<tbody> <!-- 테이블 바디 -->
+		<tr>
+			<td>1</td>
+			<td>김감자</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>최둘기</td>
+		</tr>
+		</tbody>
+		
+		<tfoot> <!-- 테이블 푸터 -->
+		<tr>
+			<td>3</td>
+			<td>정사과</td>
+		</tr>
+		</tfoot>
+	</table>
+</body>
+</html>

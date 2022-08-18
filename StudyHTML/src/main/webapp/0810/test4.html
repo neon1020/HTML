@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0810/test4.html</title>
+<style type="text/css">
+	/* 바깥 여백 */
+	div{
+		/* 겹쳐지는 부분에는 margin 중첩이 일어남
+		    => 30 30끼리 만나서 60이 되는 게 아니라 중첩되어서 30으로 적용됨 (큰 것 기준으로 적용됨) */
+		/* margin: 30px; */
+		/* margin-top: 10px; 각 부분 따로 적용 */
+		/*margin: 10px 30px;  위 아래 */
+		/* margin: 10px 20px 30px 40px; 위 오른쪽 아래 왼쪽 */
+		
+		
+		/* 영역 (가로) 가운데 정렬 : margin 이용하여 auto 적용 */
+		/* 30px는 위아래 여백, auto는 좌우 알아서 설정 */
+		margin: 30px auto;
+	}
+	
+	#box1{
+		background-color: blue;
+	}
+	
+	#box2{
+		background-color: red;
+	}
+	
+	#box3{
+		background-color: green;
+	}
+	
+	/* 안 여백 */
+	div {
+		/* padding: 50px; */
+		/* padding-top: 10px;  각 부분 따로 지정 */
+		/* padding: 10px 50px; 위 아래 */
+		padding: 10px 50px 100px 200px; /* 위 오른쪽 아래 왼쪽 */
+	}
+	
+</style>
+</head>
+<body>
+	<div id="box1">내용1</div>
+	<div id="box2">내용2</div>
+	<div id="box3">내용3</div>
+</body>
+</html>
