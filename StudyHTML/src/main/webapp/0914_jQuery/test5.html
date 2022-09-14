@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0914_jQuery/test5.html</title>
+<script src="jquery-3.6.1.js"></script>
+<script>
+	$(document).ready(function() {
+		// 대상.html() => 내용 가져오기
+		var d = $("div").html();
+		// alert(d);
+		
+		// 대상.html(변경할 내용) => 내용 변경
+		// 태그도 넣을 수 있다!
+		// $("div").html("<h1>변경</h1>");
+		
+		$("div").html(function(index, oldhtml) {
+			// alert(index); // 0, 1, 2
+			// alert(oldhtml); // div - 0, div - 1, div - 2
+			return oldhtml + " 변경내용 " + index; // 리턴값으로 변경됨
+		});
+		
+		// ---------------------------------------------------------------------
+		
+		// 대상.append() => 뒷부분에 내용 추가 (기존 내용은 유지됨!)
+		$("body").append("본문 뒷부분에 추가");
+		$("h1").append("제목 뒷부분에 추가");
+		$("h1").append(function(index, html) {
+			// alert(index); // 0, 1, 2
+			// alert(html); // head - 0 제목 뒷부분에 추가 x 3
+			return "*" + index;
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>head - 0</h1>
+	<h1>head - 1</h1>
+	<h1>head - 2</h1>
+	<div>div - 0</div>
+	<div>div - 1</div>
+	<div>div - 2</div>
+</body>
+</html>

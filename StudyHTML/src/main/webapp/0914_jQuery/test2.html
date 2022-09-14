@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0914_jQuery/test2.html</title>
+<script src="jquery-3.6.1.js"></script>
+<script>
+	$(document).ready(function() {
+		// 대상.함수()
+		// 대상 : * (전체), h1 등 태그 대상, #이름(id), .이름(class)
+		$("*").css("color", "blue");
+		$("h1").css("color", "red");
+		$("p").css("color", "green");
+		
+		// ----------------------------------------------------------------------
+		
+		$("#hh").css("background-color", "pink");
+		$("#pp").css("background-color", "orange")
+		
+		$(".hhh").css("background-color", "skyblue");
+		$(".ppp").css("background-color", "yellow");
+		
+		// ----------------------------------------------------------------------
+		
+		// 태그[속성]([속성=값], [속성^=값](시작 글자), [속성$=값](끝 글자), [속성*=값](포함 글자))
+		$("input[type=text]").css("color", "red");
+		$("input[type^=p]").css("color", "green"); // type 값이 p로 시작하는 선택자
+		
+		// 태그:odd (홀수번째), 태그:even (짝수번째), 태그:first (첫번째), 태그:last (마지막)
+		$("tr:odd").css("background-color", "yellow");
+		$("tr:even").css("background-color", "green");
+		$("tr:first").css("background-color", "red");
+		$("tr:last").css("background-color", "pink");
+	});
+</script>
+</head>
+<body>
+	<table>
+		<tr><td>번호</td><td>제목</td></tr>
+		<tr><td>1</td><td>제목 1</td></tr>
+		<tr><td>2</td><td>제목 2</td></tr>
+		<tr><td>3</td><td>제목 3</td></tr>
+		<tr><td>4</td><td>제목 4</td></tr>
+	</table>
+	텍스트 : <input type="text"><br>
+	비밀번호 : <input type="password"><br>
+	<h1>제목 1</h1>
+	<h1 id="hh">제목 2</h1>
+	<h1 class="hhh">제목 3</h1>
+	<p>본문 1</p>
+	<p id="pp">본문 2</p>
+	<p class="ppp">본문 3</p>
+</body>
+</html>

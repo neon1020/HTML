@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0914_jQuery/test3.html</title>
+<script src="jquery-3.6.1.js"></script>
+<script>
+	$(document).ready(function() {
+		// 대상.css(속성) => 속성값 리턴
+		var h = $("h1").css("color");
+		// alert(h);
+		
+		// ---------------------------------------------------------
+		
+		// 같은 대상에 여러 속성 적용할 때
+		$("h1").css({
+			"color":"blue",
+			"background-color":"skyblue"
+		});
+		
+		// ---------------------------------------------------------
+		
+		$("h1").css("color", function(index) {
+			// alert(index); // 0, 1, 2 출력
+			if(index == 0) {
+				return "red";
+			} else if (index == 1) {
+				return "green";
+			} else {
+				return "blue";
+			}
+		});
+		
+		// ---------------------------------------------------------
+		
+		// 배열변수 사용
+		var arr = ["orange", "yellow", "pink"];
+		$("h1").css("color", function(index) {
+			// alert(arr[index]);
+			return arr[index];
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>head - 0</h1>
+	<h1>head - 1</h1>
+	<h1>head - 2</h1>
+</body>
+</html>

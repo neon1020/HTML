@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0914_jQuery/test4.html</title>
+<script src="jquery-3.6.1.js"></script>
+<script>
+	$(document).ready(function() {
+		// 대상.attr(속성) => 속성값 리턴
+		var w = $("img").attr("width");
+		// alert(w);
+		
+		// 대상.attr(속성, 속성값) => 속성값 변경
+		$("img").attr("width","500px");
+		$("img").attr("height","300px");
+		
+		// 여러 속성 한 번에 변경
+		$("img").attr({
+			"src" : "../0907/activity.jpg",
+			"border" : "10px"
+		});
+	});
+</script>
+</head>
+<body>
+	<img src="../0907/healing.jpg" width="300px" height="200px" border="5px">
+</body>
+</html>

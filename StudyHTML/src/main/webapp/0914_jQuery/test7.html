@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>0914_jQuery/test7.html</title>
+<script src="jquery-3.6.1.js"></script>
+<script>
+	$(document).ready(function() {
+		// id="btn" 클릭 시 click() 발생
+		$("#btn").click(function() {
+			// 클릭 시 id="myid", id="mypass" 의 value 값 출력하기
+			alert($("#myid").val());
+			alert($("#mypass").val());
+		});
+		
+		// -------------------------------------------------------------------------
+		
+		// id="sdtn" 클릭 시 submit() 이벤트 발생 => form 태그에 걸어줘야한다!
+		$("#myform").submit(function() {
+			// alert("전송");
+			if($("#myid").val() == "") {
+				alert("아이디를 입력해주세요.");
+				$("#dd").html("아이디를 입력해주세요.").css("color", "red");
+				$("#myid").focus();
+				return false; // submit 기능 멈추게 하기 위해 false 값 리턴
+			}
+			
+			if($("#mypass").val() == "") {
+				alert("패스워드를 입력해주세요.");
+				$("#dd").html("패스워드를 입력해주세요.").css("color", "red");
+				$("#mypass").focus();
+				return false; // submit 기능 멈추게 하기 위해 false 값 리턴
+			}
+			
+			// alert($("#man").is(":checked")); => is(비교값) : 비교값과 같은지 비교
+			// 체크되어있으면 true, 아니면 false 리턴
+			if($("#man").is(":checked") == false && $("#woman").is(":checked") == false) {
+				$("#dd").html("성별을 체크해주세요.").css("color", "red");
+				return false;
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<form action="a.jsp" method="get" id="myform">
+		아이디 : <input type="text" name="id" id="myid"><br>
+		비밀번호 : <input type="password" name="pass" id="mypass"><br>
+		성별 : <input type="radio" name="gender" value="남" id="man">남자
+			   <input type="radio" name="gender" value="여" id="woman">여자<br>
+		<div id="dd"></div>
+		<input type="button" value="버튼" id="btn">
+		<input type="submit" value="전송" id="sdtn">
+	</form>
+
+</body>
+</html>
